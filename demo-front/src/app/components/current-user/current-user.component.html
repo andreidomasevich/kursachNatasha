@@ -1,0 +1,54 @@
+<p>Lastname: {{ user.lastname }}</p>
+<p>Name: {{ user.name }}</p>
+<p>Surname: {{ user.surname }}</p>
+<p>Day of birth: {{ user.dayOfBirth }}</p>
+<p>Passport number: {{ user.passportNumber }}</p>
+<p>Address: {{ user.address }}</p>
+<p>Login: {{ user.login }}</p>
+<p>Email: {{ user.email }}</p>
+
+<h1>Credits</h1>
+
+<table class="table_dark">
+  <caption>All credits of current user</caption>
+
+  <tr>
+    <th>Id</th>
+    <th>Amount</th>
+    <th>Percent</th>
+    <th>Term</th>
+    <th>Purpose</th>
+
+  </tr>
+  <tr *ngFor="let credit of credits">
+    <td>{{ credit.id }}</td>
+    <td>{{ credit.amount }}</td>
+    <td>{{ credit.percent }}</td>
+    <td>{{ credit.term }}</td>
+    <td>{{ credit.purpose }}</td>
+  </tr>
+</table>
+
+<h1>Deposits</h1>
+
+<table class="table_dark">
+  <caption>All deposits of current user</caption>
+
+  <tr>
+    <th>Id</th>
+    <th>Amount</th>
+    <th>Percent</th>
+    <th>Term</th>
+    <th>Purpose</th>
+
+  </tr>
+  <tr *ngFor="let deposit of deposits">
+    <td>{{ deposit.id }}</td>
+    <td>{{ deposit.amount }}</td>
+    <td>{{ deposit.percent }}</td>
+    <td>{{ deposit.term }}</td>
+    <td>{{ deposit.purpose }}</td>
+  </tr>
+</table>
+
+

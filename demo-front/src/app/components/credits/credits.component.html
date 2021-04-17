@@ -1,0 +1,22 @@
+<button (click)="toHomePage()">to home page</button>
+<h1>Credits</h1>
+
+<table class="table_dark">
+  <caption>All credits of all users</caption>
+
+  <tr>
+    <th>Id</th>
+    <th>Amount</th>
+    <th>Percent</th>
+    <th>Term</th>
+    <th>Purpose</th>
+
+  </tr>
+  <tr *ngFor="let credit of credits">
+    <td>{{ credit.id }}</td>
+    <td>{{ credit.amount }}</td>
+    <td>{{ credit.percent }}</td>
+    <td>{{ credit.term }}</td>
+    <td>{{ credit.purpose }}</td>
+  </tr>
+</table>

@@ -1,0 +1,43 @@
+<button (click)="toHomePage()">to home page</button>
+<h1>Users</h1>
+<div>
+  <input type="text" placeholder="lastname" [(ngModel)]="inputLastname">
+  <input type="text" placeholder="name" [(ngModel)]="inputName">
+  <input type="text" placeholder="surname" [(ngModel)]="inputSurname">
+  <input type="text" placeholder="dayOfBirth" [(ngModel)]="inputDayOfBirth">
+  <input type="text" placeholder="passportNumber" [(ngModel)]="inputPassportNumber">
+  <input type="text" placeholder="address" [(ngModel)]="inputAddress">
+  <input type="text" placeholder="login" [(ngModel)]="inputLogin">
+  <input type="text" placeholder="email" [(ngModel)]="inputEmail">
+  <input type="password" placeholder="password" [(ngModel)]="inputPassword">
+  <button (click)="onAddButtonClick()">add</button>
+</div>
+
+<table class="table_dark">
+  <caption>All users of the system</caption>
+
+  <tr>
+    <th>Id</th>
+    <th>Lastname</th>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Day of birth</th>
+    <th>Passport number</th>
+    <th>Address</th>
+    <th>Login</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let user of users" (click)="onUserClick(user)">
+    <td>{{ user.id }}</td>
+    <td>{{ user.lastname }}</td>
+    <td>{{ user.name }}</td>
+    <td>{{ user.surname }}</td>
+    <td>{{ user.dayOfBirth }}</td>
+    <td>{{ user.passportNumber }}</td>
+    <td>{{ user.address }}</td>
+    <td>{{ user.login }}</td>
+    <td>{{ user.email }}</td>
+    <td><button (click)="deleteUser(user, $event)">delete</button></td>
+  </tr>
+</table>
