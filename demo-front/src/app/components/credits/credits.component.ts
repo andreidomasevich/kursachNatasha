@@ -18,6 +18,6 @@ export class CreditsComponent implements OnInit {
   }
 
   toHomePage() {
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/home");
   }
 }

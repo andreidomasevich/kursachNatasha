@@ -63,6 +63,6 @@ export class UsersComponent implements OnInit {
   }
 
   toHomePage() {
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/home");
   }
 }
